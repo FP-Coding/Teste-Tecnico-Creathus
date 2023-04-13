@@ -14,7 +14,15 @@ class MovieService implements IMovieService {
 
   async getAll(): Promise<IMovie[]> {
     const movies = await this._model.getAll();
-    const formatedMovies = movies.map((m) => new Movie(m.author, m.title, m.description, m.id));
+
+    const formatedMovies = movies
+      .map((m: IMovie) => new Movie(
+        m.author,
+        m.title,
+        m.description,
+        m.image,
+        m.id,
+      ).getInfoMovie());
     return formatedMovies;
   }
 
@@ -22,7 +30,13 @@ class MovieService implements IMovieService {
     if (!isValidObjectId(id)) throw new GenericError(404, 'Invalid id');
     const movie = await this._model.getById(id);
     if (!movie) throw new GenericError(404, 'Movie not found');
-    return new Movie(movie.author, movie.title, movie.description, movie.id);
+    return new Movie(
+      movie.author,
+      movie.title,
+      movie.description,
+      movie.image,
+      movie.id,
+    ).getInfoMovie();
   }
 }
 

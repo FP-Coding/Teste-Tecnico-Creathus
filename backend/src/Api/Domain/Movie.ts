@@ -9,10 +9,13 @@ class Movie implements IMovie {
 
   private _description: string;
 
-  constructor(author: string, title: string, description:string, id?: string) {
+  private _image: string;
+
+  constructor(author: string, title: string, description:string, image: string, id?: string) {
     this._author = author;
     this._title = title;
     this._description = description;
+    this._image = image;
     this._id = id;
   }
 
@@ -30,6 +33,20 @@ class Movie implements IMovie {
 
   get description() {
     return this._description;
+  }
+
+  get image() {
+    return this._image;
+  }
+
+  public getInfoMovie() {
+    return {
+      author: this._author,
+      title: this._title,
+      description: this._description,
+      image: this._image,
+      id: this._id,
+    };
   }
 }
 
