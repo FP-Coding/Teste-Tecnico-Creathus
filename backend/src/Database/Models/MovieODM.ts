@@ -14,6 +14,10 @@ class MovieODM extends AbstractODM<IMovie> {
     });
     super(schema, 'Movie');
   }
+
+  async findByTitle(title: string) {
+    return this.model.findOne({ title: { $eq: title } });
+  }
 }
 
 export default MovieODM;
