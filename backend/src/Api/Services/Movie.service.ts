@@ -40,8 +40,14 @@ class MovieService implements IMovieService {
     ).getInfoMovie();
   }
 
+  async getByTitle(title: string): Promise<IMovie | null> {
+    return this._model.findByTitle(title);
+  }
+
   async create(newMovieInfo: INewMovie): Promise<IMovie> {
     validationMovieFields(newMovieInfo);
+    const isAlredyExist = await this.getByTitle(newMovieInfo.title);
+    if (isAlredyExist) throw new GenericError(409, 'This film is already registered');
     const createdMovie = await this._model.create(newMovieInfo);
     const formatedCreatedMovie = new Movie(
       createdMovie.author,
