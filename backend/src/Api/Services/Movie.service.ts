@@ -13,9 +13,8 @@ class MovieService implements IMovieService {
     this._model = model;
   }
 
-  async getAll(): Promise<IMovie[]> {
-    const movies = await this._model.getAll();
-
+  async getAll(page: number): Promise<IMovie[]> {
+    const movies = await this._model.getAll(page);
     const formatedMovies = movies
       .map((m: IMovie) => new Movie(
         m.author,

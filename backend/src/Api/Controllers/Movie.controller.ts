@@ -11,8 +11,9 @@ class MovieController implements IMovieController {
     this._service = service;
   }
 
-  async getAll(_req: Request, res: Response): Promise<Response> {
-    const movies = await this._service.getAll();
+  async getAll(req: Request, res: Response): Promise<Response> {
+    const { page } = req.query;
+    const movies = await this._service.getAll(Number(page));
     return res.status(200).json(movies);
   }
 

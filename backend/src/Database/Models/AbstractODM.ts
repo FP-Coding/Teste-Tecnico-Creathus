@@ -26,8 +26,9 @@ abstract class GenericModel<T> {
     return this.model.findById(id);
   }
 
-  public async getAll(): Promise<T[]> {
-    return this.model.find();
+  public async getAll(page = 0): Promise<T[]> {
+    const itemsPorPage = 20;
+    return this.model.find().limit(itemsPorPage).skip(itemsPorPage * page);
   }
 }
 
