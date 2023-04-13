@@ -1,0 +1,25 @@
+.container-movie-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 150px;
+  width: 15vh;
+  text-align: center;
+}
+
+.image-movie {
+  min-heigth: 250px;
+  min-width: 150px;
+  height: 25vh;
+  width:15vh;
+  border-radius: 8px;
+  box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #da6220,
+              0 0 0.8rem #da6220,
+              inset 0 0 1.3rem #da6220;
+}
+.name-movie {
+  font-size: 1.2em;
+  font-weight: 600;
+}
