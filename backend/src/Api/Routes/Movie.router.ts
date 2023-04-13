@@ -10,5 +10,6 @@ const controllerBase = new MovieController(serviceBase);
 
 route.get('/:id', (req: Request, res: Response) => controllerBase.getById(req, res));
 route.get('/', (req: Request, res: Response) => controllerBase.getAll(req, res));
+route.post('/', (req: Request, res: Response) => controllerBase.create(req, res));
 
 export default route;
