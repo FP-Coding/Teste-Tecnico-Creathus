@@ -40,13 +40,13 @@ class Movie implements IMovie {
   }
 
   public getInfoMovie() {
-    return {
+    const infos = {
       author: this._author,
       title: this._title,
       description: this._description,
       image: this._image,
-      id: this._id,
     };
+    return this._id ? { ...infos, id: this._id } : infos;
   }
 }
 
