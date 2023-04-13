@@ -28,7 +28,7 @@ class MovieService implements IMovieService {
   }
 
   async getById(id: string): Promise<IMovie | null> {
-    if (!isValidObjectId(id)) throw new GenericError(404, 'Invalid id');
+    if (!isValidObjectId(id)) throw new GenericError(422, 'Invalid id');
     const movie = await this._model.getById(id);
     if (!movie) throw new GenericError(404, 'Movie not found');
     return new Movie(

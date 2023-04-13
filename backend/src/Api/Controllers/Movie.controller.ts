@@ -31,7 +31,7 @@ class MovieController implements IMovieController {
       infoMovie.image,
     ).getInfoMovie();
     const movie = await this._service.create(formatedInfoMovie);
-    return res.status(200).json(movie);
+    return res.status(201).json(movie);
   }
 }
 
