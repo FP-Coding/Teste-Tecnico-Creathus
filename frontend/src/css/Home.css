@@ -1,0 +1,38 @@
+.container-home {
+  display: flex
+}
+
+.container-movies {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 90vw;
+  margin: 0 1rem;
+}
+
+.main-title {
+  font-size: 1.8em;
+  font-weight: 900;
+
+}
+
+.button-page {
+  background-color: #da6220;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  align-self: flex-end;
+}
+
+.button-page:hover {
+  background-color: rgba(218,98,32, 0.7)
+}
+
+.container-movies-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 4rem 0;
+}
