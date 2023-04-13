@@ -1,9 +1,10 @@
 import { isValidObjectId } from 'mongoose';
 import MovieODM from '../../Database/Models/MovieODM';
-import IMovie from '../Interfaces/IMovie';
+import IMovie, { INewMovie } from '../Interfaces/IMovie';
 import IMovieService from '../Interfaces/IMovieService';
 import Movie from '../Domain/Movie';
 import GenericError from '../Errors/GenericError';
+import validationMovieFields from './validators/ValidationFields';
 
 class MovieService implements IMovieService {
   private _model: MovieODM;
@@ -37,6 +38,19 @@ class MovieService implements IMovieService {
       movie.image,
       movie.id,
     ).getInfoMovie();
+  }
+
+  async create(newMovieInfo: INewMovie): Promise<IMovie> {
+    validationMovieFields(newMovieInfo);
+    const createdMovie = await this._model.create(newMovieInfo);
+    const formatedCreatedMovie = new Movie(
+      createdMovie.author,
+      createdMovie.title,
+      createdMovie.description,
+      createdMovie.image,
+      createdMovie.id,
+    ).getInfoMovie();
+    return formatedCreatedMovie;
   }
 }
 
