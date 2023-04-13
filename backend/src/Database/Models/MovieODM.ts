@@ -9,6 +9,8 @@ class MovieODM extends AbstractODM<IMovie> {
       title: { type: String, required: true },
       description: { type: String, required: true },
       image: { type: String, required: true },
+    }, {
+      versionKey: false,
     });
     super(schema, 'Movie');
   }
