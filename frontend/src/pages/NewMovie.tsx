@@ -15,11 +15,12 @@ function NewMovie(props: RouteComponentProps) {
 
   const handleImageFile = ({ target }: ChangeEvent<HTMLInputElement>) => {
     const imageFile = target.files?.[0];
+
     if (imageFile) {
       const reader = new FileReader();
       reader.onloadend = () => {
         const imageBase64 = reader.result?.toString() || '';
-        setImage(imageBase64);
+        return setImage(imageBase64);
       };
       reader.readAsDataURL(imageFile);
     }
