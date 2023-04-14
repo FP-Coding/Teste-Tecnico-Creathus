@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { House, UserPlus } from '@phosphor-icons/react';
 import Logo from '../assets/C.svg';
 import '../css/Header.css';
 
 function Header({ location: { pathname } }: RouteComponentProps) {
-  
-  const selectedHome = pathname === '/' ? 'selected-page' :  '';
-  const selectedAdd = pathname === '/novo-filme' ? 'selected-page' :  '';
+  const selectedHome = pathname === '/' ? 'selected-page' : '';
+  const selectedAdd = pathname === '/novo-filme' ? 'selected-page' : '';
 
   return (
     <nav className="container-nav">
