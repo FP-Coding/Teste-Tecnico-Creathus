@@ -10,9 +10,14 @@ module.exports = {
   globals: {
     document: 'readonly',
     HTMLElement: 'readonly',
+    HTMLInputElement: 'readonly',
+    HTMLTextAreaElement: 'readonly',
+    FileReader: 'readonly',
+    window: 'readonly',
   },
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', 'ts', 'tsx'] }],
-    'react/jsx-props-no-spreading': 'disabled',
+    'react/jsx-props-no-spreading': 0,
+    'no-alert': 0,
   },
 };
