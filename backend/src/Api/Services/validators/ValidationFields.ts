@@ -1,4 +1,3 @@
-import { log } from 'console';
 import GenericError from '../../Errors/GenericError';
 import { INewMovie } from '../../Interfaces/IMovie';
 import movieFieldsSchema from './schemas';
