@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from '../components/Header.tsx';
 import { RouteComponentProps } from 'react-router-dom';
+import Header from '../components/Header.tsx';
 
 function MovieDetails(props: RouteComponentProps) {
   return (
-    <Header {...props}/>
+    <Header {...props} />
   );
 }
 
