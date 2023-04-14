@@ -1,4 +1,4 @@
-export default interface ICreateMovieInfo {
+interface ICreateMovieInfo {
   author: string,
   title: string,
   description: string,
@@ -6,5 +6,7 @@ export default interface ICreateMovieInfo {
 }
 
 export interface IMovieInfo extends ICreateMovieInfo {
-  id?: string,
+  id: string,
 }
+
+export default ICreateMovieInfo;
