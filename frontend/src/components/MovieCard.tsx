@@ -1,13 +1,15 @@
 import React from 'react';
 import '../css/MovieCard.css';
-import IMovieCardProps from '../interfaces/IMovieCardProps';
+import { Link } from 'react-router-dom';
+import IMovieCardProps from '../interfaces/IMovieCardProps.ts';
 
-
-function MovieCard({ image, title }: IMovieCardProps) {
+function MovieCard({ image, title, id }: IMovieCardProps) {
   return (
     <div className="container-movie-card">
-      <img src={image} alt={title} className='image-movie'/>
-      <p className='name-movie'>{ title }</p>
+      <Link to={`/${id}/detalhes`}>
+        <img src={image} alt={title} className="image-movie" />
+        <p className="name-movie">{ title }</p>
+      </Link>
     </div>
   );
 }
