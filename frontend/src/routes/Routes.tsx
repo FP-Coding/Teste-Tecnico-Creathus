@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Home from '../pages/Home.js';
-import MovieDetails from '../pages/MovieDetails.js';
-import NewMovie from '../pages/NewMovie.js';
+import Home from '../pages/Home.tsx';
+import MovieDetails from '../pages/MovieDetails.tsx';
+import NewMovie from '../pages/NewMovie.tsx';
 
 function Routes() {
   return (
