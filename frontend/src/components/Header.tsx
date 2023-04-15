@@ -9,7 +9,7 @@ function Header({ location: { pathname } }: RouteComponentProps) {
   const selectedAdd = pathname === '/novo-filme' ? 'selected-page' : '';
 
   return (
-    <nav className="container-nav">
+    <header className="container-nav">
       <img src={Logo} alt="Logo" className="logo-header" />
       <Link to="/" className={`link-nav ${selectedHome}`}>
         <House size={40} alt="simbolo que representa uma casa" />
@@ -23,7 +23,7 @@ function Header({ location: { pathname } }: RouteComponentProps) {
           Adicionar
         </span>
       </Link>
-    </nav>
+    </header>
   );
 }
 

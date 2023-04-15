@@ -5,12 +5,12 @@ import '../css/HeaderDetails.css';
 
 function HeaderDetails() {
   return (
-    <nav className="container-header-details">
+    <header className="container-header-details">
       <div className="container-nav-details">
         <img src={Logo} alt="Logo" className="logo-header" />
         <Link to="/" className="link-header-details">Home</Link>
       </div>
-    </nav>
+    </header>
   );
 }
 
