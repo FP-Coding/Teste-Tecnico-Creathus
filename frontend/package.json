@@ -10,7 +10,7 @@
     "test": "vite-test",
     "lint": "eslint src --ext .ts,.tsx",
     "start": "npx http-server ./dist",
-    "start-railway": "npx http-server ./dist -a 0.0.0.0"
+    "start-railway": "npx http-server ./dist -a 0.0.0.0 -S -C cert.pem"
 
   },
   "dependencies": {
