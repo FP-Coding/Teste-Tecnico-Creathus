@@ -76,8 +76,6 @@ describe('Teste para rota de filmes', function () {
     const response = await chai.request(app).post('/movies').send(createMovieInfoMock);
 
     expect(response.status).to.be.equal(409);
-    // expect(response.body.message).not.to.be.equal('This film is already registered')
-
     expect(response.body).to.be.deep.equal({ message: 'This film is already registered' })
   });
 });
