@@ -1,0 +1,43 @@
+.container-image {
+  width:100%;
+  height: 90vh;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to top, transparent 3%, black 100%); 
+}
+
+.container-main-info-movie {
+  position: relative;
+}
+
+.image-details {
+  width: 100%;
+}
+
+.container-movie-details {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title-movie-details {
+  color: white;
+  font-weight: 900;
+  position: absolute;
+  font-size: 2.5rem;
+  left: 2vw;
+  bottom: 10vh;
+}
+
+.logo-c-show {
+  position: absolute;
+  width: 10vw;
+  min-width: 100px;
+  left: 1vw;
+  bottom: 15vh;
+}
+
+.info-movie {
+  margin: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
