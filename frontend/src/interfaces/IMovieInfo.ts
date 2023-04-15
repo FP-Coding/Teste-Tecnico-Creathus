@@ -5,8 +5,10 @@ interface ICreateMovieInfo {
   image: string,
 }
 
-export interface IMovieInfo extends ICreateMovieInfo {
+export interface IMovieId {
   id: string,
 }
+
+export interface IMovieInfo extends ICreateMovieInfo, IMovieId {}
 
 export default ICreateMovieInfo;
