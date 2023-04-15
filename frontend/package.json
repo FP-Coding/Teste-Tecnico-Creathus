@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "test": "vite-test",
     "lint": "eslint src --ext .ts,.tsx",
-    "start": "npx http-server ./dist -a $HOST"
+    "start": "npx http-server ./dist",
+    "start-railway": "npx http-server ./dist -a 0.0.0.0"
+
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.8",
