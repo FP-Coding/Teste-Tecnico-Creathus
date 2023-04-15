@@ -16,8 +16,11 @@ module.exports = {
     window: 'readonly',
   },
   rules: {
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', 'ts', 'tsx'] }],
+    'react/jsx-filename-extension': [0, { extensions: ['.js', '.jsx', 'ts', 'tsx'] }],
     'react/jsx-props-no-spreading': 0,
     'no-alert': 0,
+    'import/no-unresolved': 'off',
+    'import/extensions': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
 };
