@@ -73,7 +73,7 @@ Foram encontradas 2 possíveis soluções para este problema:
 #### Pegar todos os movies cadastrados
 
 ```http
-  GET /movies
+  GET /movies?page=0
   ```
 
   | Parâmetro   | Tipo       | Descrição                                   |
