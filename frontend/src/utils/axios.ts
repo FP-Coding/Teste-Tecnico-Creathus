@@ -1,9 +1,9 @@
 import axios from 'axios';
 import IMovieInfo from '../interfaces/IMovieInfo';
 
-const PORT = import.meta.env.REACT_APP_BACKEND_PORT || 3001;
-const HOST = import.meta.env.REACT_APP_BACKEND_HOST || 'localhost';
-const api = axios.create({ baseURL: `http://${HOST}:${PORT}` });
+const HOST = import.meta.env.REACT_APP_BACKEND_HOST || 'localhost:3001';
+const PROTOCOL = import.meta.env.REACT_APP_PROTOCOL || 'http';
+const api = axios.create({ baseURL: `${PROTOCOL}://${HOST}` });
 
 export const postRequest = async (endpoint: string, body: IMovieInfo) => {
   const { data } = await api.post(endpoint, body);
