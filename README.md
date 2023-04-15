@@ -88,6 +88,7 @@ Página que traz um formulário para adição de um novo filme.
 Página que traz os detalhes de um filme com a imagem do poster e a sinopse.
 
 <br />
+
 Qualquer duvida entre em contato comigo:
 
 E-mail: felipe14062000@gmail.com
