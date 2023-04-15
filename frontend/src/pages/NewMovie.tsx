@@ -1,12 +1,12 @@
 import React, { ChangeEvent, useState } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { AxiosError } from 'axios';
-import Header from '../components/Header.tsx';
+import Header from '../components/Header';
 import '../css/NewMovie.css';
-import baseImage from '../utils/baseImage.ts';
-import ICreateMovieInfo from '../interfaces/IMovieInfo.ts';
-import { postRequest } from '../utils/axios.ts';
-import IErrorRequest from '../interfaces/IErrorRequest.ts';
+import baseImage from '../utils/baseImage';
+import ICreateMovieInfo from '../interfaces/IMovieInfo';
+import { postRequest } from '../utils/axios';
+import IErrorRequest from '../interfaces/IErrorRequest';
 
 function NewMovie(props: RouteComponentProps) {
   const [author, setAuthor] = useState('');

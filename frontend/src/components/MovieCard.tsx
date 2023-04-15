@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/MovieCard.css';
 import { Link } from 'react-router-dom';
-import IMovieCardProps from '../interfaces/IMovieCardProps.ts';
+import IMovieCardProps from '../interfaces/IMovieCardProps';
 
 function MovieCard({ image, title, id }: IMovieCardProps) {
   return (

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
-import Header from '../components/Header.tsx';
+import Header from '../components/Header';
 import '../css/Home.css';
-import { getRequest } from '../utils/axios.ts';
-import { IMovieInfo } from '../interfaces/IMovieInfo.ts';
-import MovieCard from '../components/MovieCard.tsx';
+import { getRequest } from '../utils/axios';
+import { IMovieInfo } from '../interfaces/IMovieInfo';
+import MovieCard from '../components/MovieCard';
 
 function Home(props: RouteComponentProps) {
   const [movies, setMovies] = useState<IMovieInfo[]>([]);

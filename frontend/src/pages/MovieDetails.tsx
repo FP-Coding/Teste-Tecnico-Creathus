@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
-import { getRequest } from '../utils/axios.ts';
-import { IMovieId, IMovieInfo } from '../interfaces/IMovieInfo.ts';
-import HeaderDetails from '../components/HeaderDetails.tsx';
+import { getRequest } from '../utils/axios';
+import { IMovieId, IMovieInfo } from '../interfaces/IMovieInfo';
+import HeaderDetails from '../components/HeaderDetails';
 import '../css/MovieDetails.css';
 
 function MovieDetails(props: RouteComponentProps) {
