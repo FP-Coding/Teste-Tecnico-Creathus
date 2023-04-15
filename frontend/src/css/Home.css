@@ -21,6 +21,10 @@
   align-self: flex-end;
 }
 
+.button-page:not([disabled]):hover {
+  opacity: 0.8;
+}
+
 .container-movies-card {
   display: flex;
   flex-wrap: wrap;
