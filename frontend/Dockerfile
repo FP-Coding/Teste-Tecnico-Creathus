@@ -11,4 +11,4 @@ COPY . ./
 EXPOSE 5173
 
 ENTRYPOINT ["npm", "run"]
-CMD ["dev"]
+CMD ["build"]
