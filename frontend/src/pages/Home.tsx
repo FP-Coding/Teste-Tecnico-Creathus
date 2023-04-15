@@ -35,7 +35,7 @@ function Home(props: RouteComponentProps) {
             type="button"
             className="button-page"
             onClick={changeBeforePage}
-            disabled={numberPage >= 0}
+            disabled={numberPage === 0}
           >
             Anterior
           </button>
