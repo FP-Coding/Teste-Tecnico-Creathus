@@ -54,10 +54,6 @@ Foram encontradas 2 possíveis soluções para este problema:
   POST /movies
 ```
 
-```
- Sera validado se existe um token no headers e se o usuário é um admin.
-```
-
 | Parâmetro   | Tipo       | Descrição                           |
 | :---------- | :--------- | :---------------------------------- |
 | `author` | `string` | **Obrigatório no body**. |
