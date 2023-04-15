@@ -74,7 +74,7 @@ Foram encontradas 2 possíveis soluções para este problema:
 | :---------- | :--------- | :------------------------------------------ |
 | `id`      | `string` | **Obrigatório no params da rota**.  |
 
-#### Pegar todos products da loja
+#### Pegar todos os movies cadastrados
 
 ```http
   GET /movies
