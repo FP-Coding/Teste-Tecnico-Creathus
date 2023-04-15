@@ -30,7 +30,7 @@ function MovieDetails(props: RouteComponentProps) {
           <h1 className="title-movie-details">{movie.title}</h1>
         </div>
         <div className="info-movie">
-          <h3>SINOPSE & INFO</h3>
+          <h3 className="title-sinopse">SINOPSE & INFO</h3>
           <p className="sinopse-movie">{movie.description}</p>
         </div>
       </div>
