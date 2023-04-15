@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "test": "vite-test",
     "lint": "eslint src --ext .ts,.tsx",
-    "start": "npx http-server ./dist"
+    "start": "npx http-server ./dist -a $HOST"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.8",
