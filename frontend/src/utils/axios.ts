@@ -1,5 +1,5 @@
 import axios from 'axios';
-import IMovieInfo from '../interfaces/IMovieInfo.ts';
+import IMovieInfo from '../interfaces/IMovieInfo';
 
 const PORT = import.meta.env.REACT_APP_BACKEND_PORT || 3001;
 const HOST = import.meta.env.REACT_APP_BACKEND_HOST || 'localhost';
