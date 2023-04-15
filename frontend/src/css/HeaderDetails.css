@@ -1,0 +1,26 @@
+.container-header-details {
+  display: flex;
+  align-items: space-between;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(218,98,32, 0.1);
+  width: 100%;
+}
+
+.container-nav-details {
+  display: flex;
+  gap: 40px;
+  padding: 0 16px;
+  align-items: center;
+  width: 100%;
+}
+
+.link-header-details {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
