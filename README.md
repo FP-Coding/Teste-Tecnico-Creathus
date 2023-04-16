@@ -3,9 +3,10 @@
 - Back-end: Typescript, Node, Moongose, MongoDB, Docker, Express, Joi, Chai, Mocha, Sinon
 - Front-end: React, Typescript, Axios, react-router-dom
 
-## Rodando o Docker
-<br />
-Rode os serviços api_movies e mongodb com o comando ```docker-compose up -d```.
+## Rodando a aplicação
+
+Rode os serviços api_movies e mongodb com o comando 
+```docker-compose up -d```
 
 Lembre-se de parar o mongodb se estiver usando localmente na porta padrão (27017), ou adapte, caso queria fazer uso da aplicação em containers.
 
