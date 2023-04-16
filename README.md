@@ -91,6 +91,8 @@ Página que traz os detalhes de um filme com a imagem do poster e a sinopse.
 
 Qualquer duvida entre em contato comigo:
 
+Link do deploy no railway: https://uptight-deer-production.up.railway.app/
+
 E-mail: felipe14062000@gmail.com
 
 Linkedin: https://www.linkedin.com/in/felipe-pinto-coder/
