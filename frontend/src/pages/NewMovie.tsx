@@ -33,9 +33,9 @@ function NewMovie(props: RouteComponentProps) {
       window.alert('Filme criado com sucesso');
       return resetForm();
     } catch (error) {
-      if (error instanceof AxiosError) {
-        return window.alert(error.message);
-      }
+      // if (error instanceof AxiosError) {
+      //   return window.alert(error.message);
+      // }
       const err = error as IErrorRequest;
       return window.alert(err.response.data.message);
     }
