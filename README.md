@@ -38,6 +38,7 @@ Foram encontradas 2 possíveis soluções para este problema:
 
 # Rotas Da Api
 <br/>
+
 #### Criar um movie
 ```http
   POST /movies
