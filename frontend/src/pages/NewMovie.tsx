@@ -1,6 +1,5 @@
 import React, { ChangeEvent, useState } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
-import { AxiosError } from 'axios';
 import Header from '../components/Header';
 import '../css/NewMovie.css';
 import baseImage from '../utils/baseImage';
@@ -33,11 +32,8 @@ function NewMovie(props: RouteComponentProps) {
       window.alert('Filme criado com sucesso');
       return resetForm();
     } catch (error) {
-      // if (error instanceof AxiosError) {
-      //   return window.alert(error.message);
-      // }
       const err = error as IErrorRequest;
-      return window.alert(err.response.data.message);
+      return window.alert(err?.response?.data?.message || 'Internal error');
     }
   };
 

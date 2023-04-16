@@ -1,11 +1,10 @@
 import axios from 'axios';
 import IMovieInfo from '../interfaces/IMovieInfo';
 
-const HOST = import.meta.env.REACT_APP_BACKEND_HOST;
-const PROTOCOL = import.meta.env.REACT_APP_PROTOCOL;
+const HOST = import.meta.env.VITE_REACT_APP_BACKEND_HOST || 'http';
+const PROTOCOL = import.meta.env.VITE_REACT_APP_PROTOCOL || 'localhost:3001';
 
-const apiRailway = 'https://tiresome-agreement-production.up.railway.app';
-const baseURL = HOST && PROTOCOL ? `${PROTOCOL}://${HOST}` : apiRailway;
+const baseURL = `${PROTOCOL}://${HOST}`;
 const api = axios.create({ baseURL });
 
 export const postRequest = async (endpoint: string, body: IMovieInfo) => {
