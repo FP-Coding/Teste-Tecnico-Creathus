@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import Header from '../components/Header';
 import '../css/NewMovie.css';
@@ -12,6 +12,23 @@ function NewMovie(props: RouteComponentProps) {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [isFilled, setIsFilled] = useState(false);
+
+  useEffect(() => {
+    const fields = [];
+    if (author.length < 2) fields.push('Autor');
+    if (title.length < 2) fields.push('Título');
+    if (description.length < 20) fields.push('Descrição');
+    if (image.length < 5) fields.push('Imagem');
+
+    if (fields.length > 0) {
+      setIsFilled(false);
+      return setErrorMessage(`Os valores dos campos de: ${fields.join(', ')} faltam ser preenchidos ou estão inválidos`);
+    }
+    setErrorMessage('');
+    return setIsFilled(true);
+  }, [author, title, description, image]);
 
   const resetForm = () => {
     setAuthor('');
@@ -89,12 +106,14 @@ function NewMovie(props: RouteComponentProps) {
               value={image}
             />
           </label>
+          <p>{errorMessage}</p>
           <div>
             <div className="button-container-form">
               <button
                 type="button"
                 className="button-base button-post button"
                 onClick={createMovie}
+                disabled={isFilled === false}
               >
                 Postar
               </button>

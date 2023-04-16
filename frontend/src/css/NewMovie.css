@@ -54,6 +54,10 @@
   border-radius: 4px; 
 }
 
+.button-base:disabled {
+  opacity: 0.5;
+}
+
 .button-post {
   background-color: lightgrey;
   color: black;
