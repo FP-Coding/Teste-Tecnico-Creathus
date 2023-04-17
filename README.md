@@ -14,7 +14,7 @@ Lembre-se de parar o mongodb se estiver usando localmente na porta padrão (2701
 
 Esses serviços irão inicializar um container chamado ```api_movies``` e outro chamado ```api_movies_db```. 
 
-A partir daqui você precisa acessar a pasta frontend e rodar o comando ```npm run dev``` 
+A partir daqui você precisa acessar a pasta frontend e rodar o comando ```npm install``` e depois rode ```npm run dev```
 
 :warning: Atenção :warning: Não rode o comando npm audit fix! Ele atualiza várias dependências do projeto, e essa atualização gera conflitos com o avaliador. 
 
